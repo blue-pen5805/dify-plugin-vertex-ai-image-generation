@@ -1,0 +1,46 @@
+identity:
+  author: blue_pen5805
+  name: vertex_ai
+  label:
+    en_US: Vertex AI
+  description:
+    en_US: Vertex AI
+  icon: icon_s_en.svg
+background: "#FCFDFF"
+icon_large:
+  en_US: icon_l_en.png
+icon_small:
+  en_US: icon_s_en.svg
+tools:
+  - tools/genai-image-generation.yaml
+extra:
+  python:
+    source: provider/vertex_ai.py
+credentials_for_provider:
+  vertex_project_id:
+    type: text-input
+    label:
+      en_US: Project ID
+    help:
+      en_US: Project ID for Google Cloud
+    placeholder:
+      en_US: Please enter your Google Cloud Project ID
+    required: true
+  vertex_location:
+    type: text-input
+    label:
+      en_US: Location
+    help:
+      en_US: Location for Google Cloud
+    placeholder:
+      en_US: Please enter your Google Cloud Location
+    required: true
+  vertex_service_account_key:
+    type: secret-input
+    label:
+      en_US: Service Account Key (Leave blank if you use Application Default Credentials)
+    help:
+      en_US: Service Account Key for Google Cloud in base64 format
+    placeholder:
+      en_US: Please enter your Google Cloud Service Account Key in base64 format
+    required: true

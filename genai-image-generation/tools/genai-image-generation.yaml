@@ -1,0 +1,104 @@
+identity:
+  name: genai-image-generation
+  author: blue_pen5805
+  label:
+    en_US: Vertex AI / Image Generation
+description:
+  human:
+    en_US: genai image generation
+  llm: genai image generation
+parameters:
+  - name: model
+    type: select
+    required: true
+    label:
+      en_US: model
+    human_description:
+      en_US: image generation model
+    llm_description: image generation model
+    form: form
+    options:
+      - label:
+          en_US: "imagen-3.0-generate-002"
+        value: "imagen-3.0-generate-002"
+      - label:
+          en_US: "imagen-3.0-fast-generate-001"
+        value: "imagen-3.0-fast-generate-001"
+  - name: prompt
+    type: string
+    required: true
+    label:
+      en_US: prompt
+    human_description:
+      en_US: image generation prompt
+    llm_description: image generation prompt
+    form: llm
+  - name: negative_prompt
+    type: string
+    required: false
+    label:
+      en_US: negative prompt
+    human_description:
+      en_US: negative prompt
+    llm_description: negative prompt
+    form: llm
+  - name: number_of_images
+    type: number
+    required: true
+    label:
+      en_US: number of images
+    human_description:
+      en_US: number of images
+    llm_description: number of images
+    form: form
+    default: 1
+    min: 1
+    max: 4
+  - name: enhance_prompt
+    type: boolean
+    required: true
+    label:
+      en_US: enhance prompt
+    human_description:
+      en_US: enhance prompt
+    llm_description: enhance prompt
+    form: form
+    default: true
+  - name: aspect_ratio
+    type: select
+    label:
+      en_US: aspect ratio
+    human_description:
+      en_US: aspect ratio
+    llm_description: aspect ratio
+    form: form
+    options:
+      - label:
+          en_US: "1:1"
+        value: "1:1"
+      - label:
+          en_US: "9:16"
+        value: "9:16"
+      - label:
+          en_US: "16:9"
+        value: "16:9"
+      - label:
+          en_US: "3:4"
+        value: "3:4"
+      - label:
+          en_US: "4:3"
+        value: "4:3"
+    default: "1:1"
+    required: true
+  - name: guidance_scale
+    type: number
+    required: false
+    label:
+      en_US: guidance scale
+    human_description:
+      en_US: guidance scale
+    llm_description: guidance scale
+    form: form
+extra:
+  python:
+    source: tools/genai-image-generation.py

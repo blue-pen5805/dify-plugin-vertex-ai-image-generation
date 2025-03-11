@@ -1,0 +1,2 @@
+dify_plugin~=0.0.1b67
+google-genai==1.2.0
