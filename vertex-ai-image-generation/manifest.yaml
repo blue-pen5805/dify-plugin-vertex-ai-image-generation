@@ -1,7 +1,7 @@
 version: 0.0.1
 type: plugin
 author: blue_pen5805
-name: genai-image-generation
+name: vertex-ai-image-generation
 label:
   en_US: Vertex AI | Image Generation
 description:

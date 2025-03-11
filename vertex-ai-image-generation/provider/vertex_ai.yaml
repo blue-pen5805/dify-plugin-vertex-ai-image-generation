@@ -12,7 +12,7 @@ icon_large:
 icon_small:
   en_US: icon_s_en.svg
 tools:
-  - tools/genai-image-generation.yaml
+  - tools/vertex-ai-image-generation.yaml
 extra:
   python:
     source: provider/vertex_ai.py

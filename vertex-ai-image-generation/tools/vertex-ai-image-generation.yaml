@@ -1,12 +1,12 @@
 identity:
-  name: genai-image-generation
+  name: vertex-ai-image-generation
   author: blue_pen5805
   label:
     en_US: Vertex AI / Image Generation
 description:
   human:
-    en_US: genai image generation
-  llm: genai image generation
+    en_US: vertex-ai image generation
+  llm: vertex-ai image generation
 parameters:
   - name: model
     type: select
@@ -101,4 +101,4 @@ parameters:
     form: form
 extra:
   python:
-    source: tools/genai-image-generation.py
+    source: tools/vertex-ai-image-generation.py
