@@ -62,8 +62,6 @@ class GenaiImageGenerationTool(Tool):
                     f"Image generation failed with reason: {rai_filtered_reason}"
                 )
             if generated_image.image.image_bytes:
-                images_bytes = base64.b64decode(generated_image.image.image_bytes.decode())
-
                 yield self.create_blob_message(
-                    blob=images_bytes, meta={"mime_type": mime_type}
+                    blob=generated_image.image.image_bytes, meta={"mime_type": mime_type}
                 )
